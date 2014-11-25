@@ -3,6 +3,7 @@ var browserSync = require('browser-sync');
 var sass        = require('gulp-sass');
 var prefix      = require('gulp-autoprefixer');
 var cp          = require('child_process');
+var scsslint = require('gulp-scsslint');
 
 var messages = {
     jekyllBuild: '<span style="color: grey">Running:</span> $ jekyll build'
@@ -39,6 +40,7 @@ gulp.task('browser-sync', ['sass', 'jekyll-build'], function() {
  * Compile files from _scss into both _site/css (for live injecting) and site (for future jekyll builds)
  */
 gulp.task('sass', function () {
+    gulp.run('lint');
     return gulp.src('_scss/main.scss')
         .pipe(sass({
             includePaths: ['scss'],
@@ -48,6 +50,15 @@ gulp.task('sass', function () {
         .pipe(gulp.dest('_site/css'))
         .pipe(browserSync.reload({stream:true}))
         .pipe(gulp.dest('css'));
+});
+
+/**
+ * Generate sass lint report
+ */
+gulp.task('lint', function() {
+    gulp.src('styles/*.scss')
+        .pipe(scsslint())
+        .pipe(scsslint.reporter());
 });
 
 /**

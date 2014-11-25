@@ -16,3 +16,9 @@ This will give you file watching, browser synchronisation, auto-rebuild, CSS inj
 ```shell
 $ gulp
 ```
+
+## Coding Style
+
+2 spaces for indent. No tab.
+
+See http://cssguidelin.es/ for more detail.
