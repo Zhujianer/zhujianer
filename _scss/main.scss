@@ -1,6 +1,13 @@
+@import "magic-bootstrap";      // bootstrap theme generate using magic bootstrap
+
 @import "reset";
 @import "syntax";
 
-body {
-    background: white;
-}
+@import "config.color";
+@import "config.size";          // size of general width, padding, margin, etc.
+
+@import "setting.global";       // p, h1, body, etc.
+@import "setting.link";         // <a> related
+
+@import "component.section";
+@import "component.header";

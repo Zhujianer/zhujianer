@@ -1,0 +1,8 @@
+section {
+    min-height: 300px;  // TODO: tmp value
+    background-color: $clr-gray-lightest;
+    
+    &:nth-child(even) {
+        background-color: $clr-gray-lighter;
+    }
+}

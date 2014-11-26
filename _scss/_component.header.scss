@@ -1,0 +1,18 @@
+#header-section {
+    padding: 20px;
+    background-color: $clr-primary;
+    color: $clr-gray-light;
+    height: 500px;
+    
+    #nav {
+        text-align: right;
+    }
+    
+    a {
+        color: $clr-gray-lighter;
+        
+        &.selected {
+            color: $clr-gray-lightest;
+        }
+    }
+}
