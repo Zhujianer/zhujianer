@@ -17,12 +17,10 @@ function indexScroll() {
             if ($(window).scrollTop() >= headerHeight) {
                 // scrolled down
                 $('.navbar').addClass('down');
-                console.log('add');
             }
         } else if ($(window).scrollTop() < headerHeight) {
             // scrolled up
             $('.navbar').removeClass('down');
-                console.log('remove');
         }
     })
 }
