@@ -4686,15 +4686,6 @@ h1 {
 p {
   margin: 1em 0; }
 
-a {
-  color: #00a; }
-
-a:hover {
-  color: #000; }
-
-a:visited {
-  color: #a0a; }
-
 /*****************************************************************************/
 /*
 /* Home
@@ -5069,14 +5060,19 @@ section {
   section:nth-child(even) {
     background-color: #f3f3f3; }
 
-#header-section {
-  padding: 20px;
-  background-color: #2f2946;
-  color: #eee;
-  height: 500px; }
-  #header-section #nav {
-    text-align: right; }
-  #header-section a {
+.navbar {
+  background-color: transparent;
+  border-bottom: 1px solid #5a4f86; }
+  .navbar a {
     color: #f3f3f3; }
-    #header-section a.selected {
-      color: #fcfcfc; }
+  .navbar .active > a {
+    font-weight: bold; }
+  .navbar .nav > li > a:hover, .navbar .nav > li > a:focus {
+    background-color: #040306; }
+  .navbar.down {
+    background-color: #2f2946; }
+
+.header-section {
+  height: 500px;
+  background-color: #2f2946;
+  border-bottom: 1px solid #5a4f86; }

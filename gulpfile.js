@@ -10,10 +10,20 @@ var messages = {
 };
 
 /**
+ * Copy the bower packages
+ */
+gulp.task('vendor', function() {
+    gulp.src(['app/_bower_components/jquery/dist/jquery.min.js',
+            'app/_bower_components/jquery/dist/jquery.min.map'])
+        .pipe(gulp.dest('js'));
+});
+
+/**
  * Build the Jekyll Site
  */
 gulp.task('jekyll-build', function (done) {
     browserSync.notify(messages.jekyllBuild);
+    gulp.run('vendor');
     return cp.spawn('jekyll', ['build'], {stdio: 'inherit'})
         .on('close', done);
 });

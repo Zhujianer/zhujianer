@@ -1,0 +1,9 @@
+@mixin radial-gradient($color) {
+    background: -moz-radial-gradient(center, ellipse cover, rgba(30,87,153,0.2) 0%, $clr-primary, 100%); /* FF3.6+ */
+    background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%,rgba(30,87,153,0.2)), color-stop(100%,rgba(125,185,232,0))); /* Chrome,Safari4+ */
+    background: -webkit-radial-gradient(center, ellipse cover, rgba(30,87,153,0.2) 0%,rgba(125,185,232,0) 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-radial-gradient(center, ellipse cover, rgba(30,87,153,0.2) 0%,rgba(125,185,232,0) 100%); /* Opera 12+ */
+    background: -ms-radial-gradient(center, ellipse cover, rgba(30,87,153,0.2) 0%,rgba(125,185,232,0) 100%); /* IE10+ */
+    background: radial-gradient(ellipse at center, rgba(30,87,153,0.2) 0%,rgba(125,185,232,0) 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#331e5799', endColorstr='#007db9e8',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+}

@@ -1,0 +1,23 @@
+{
+  "name": "Zhujianer",
+  "version": "0.1.0",
+  "homepage": "http://zhujianer.com",
+  "authors": [
+    "zhujianer"
+  ],
+  "description": "Web Make Nice Websites",
+  "keywords": [
+    "Website",
+    "Web Designe"
+  ],
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "~1.11.1"
+  }
+}

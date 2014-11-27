@@ -1,18 +1,30 @@
-#header-section {
-    padding: 20px;
-    background-color: $clr-primary;
-    color: $clr-gray-light;
-    height: 500px;
-    
-    #nav {
-        text-align: right;
-    }
+$header-height: 500px;
+
+.navbar {
+    background-color: transparent;
+    border-bottom: 1px solid $clr-primary-light;
     
     a {
         color: $clr-gray-lighter;
-        
-        &.selected {
-            color: $clr-gray-lightest;
-        }
     }
+    
+    .active > a {
+        font-weight: bold;
+    }
+    
+    .nav > li > a:hover, .nav > li > a:focus {
+        background-color: $clr-primary-dark;
+    }
+    
+    &.down {
+        background-color: $clr-primary;
+    }
+}
+
+
+
+.header-section {
+    height: $header-height;
+    background-color: $clr-primary;
+    border-bottom: 1px solid $clr-primary-light;
 }
