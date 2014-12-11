@@ -5146,6 +5146,9 @@ section {
 #basic.table {
   margin-left: 40px; }
 
+#customize.table {
+  margin-left: -40px; }
+
 .table {
   text-align: center;
   border-radius: 4px; }
@@ -5158,7 +5161,10 @@ section {
 
 .pink.table {
   margin-top: 20px;
-  border: 2px solid #d0648a; }
+  border: 2px solid #d0648a;
+  z-index: 10;
+  position: relative;
+  background-color: #f3f3f3; }
 
 .purple.table {
   margin-top: 40px;

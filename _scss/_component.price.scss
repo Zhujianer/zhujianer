@@ -25,8 +25,8 @@
     margin-left:40px;
 }
 
-#senior.table {
-
+#customize.table {
+    margin-left:-40px;
 }
 
 .table {
@@ -45,6 +45,9 @@
 .pink.table {
     margin-top:20px;
     border: 2px solid $clr-secondary;
+    z-index:10;
+    position:relative;
+    background-color:$clr-gray-lighter;
 }
 
 .purple.table {
