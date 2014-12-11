@@ -47,7 +47,8 @@ body {
 
 
 @for $i from 1 through 6 {
-    h#{$i} { 
+    h#{$i} {
+        font-family: $ft-fm-def;
         font-size: nth($ft-sz, $i);
         margin: 0 0 nth($ft-mg, $i) 0;
         margin-top: 0;

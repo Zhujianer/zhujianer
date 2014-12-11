@@ -5047,6 +5047,54 @@ p {
 
 /* Literal.Number.Integer.Long */
 body {
+  font-family: Lato, "Microsoft YaHei", sans-serif;
+  font-weight: 400;
+  font-size: 1.1em; }
+
+h1 {
+  font-family: Lato, "Microsoft YaHei", sans-serif;
+  font-size: 3.5em;
+  margin: 0 0 0.5em 0;
+  margin-top: 0; }
+
+h2 {
+  font-family: Lato, "Microsoft YaHei", sans-serif;
+  font-size: 2em;
+  margin: 0 0 0.2em 0;
+  margin-top: 0; }
+
+h3 {
+  font-family: Lato, "Microsoft YaHei", sans-serif;
+  font-size: 1.5em;
+  margin: 0 0 0.1em 0;
+  margin-top: 0; }
+
+h4 {
+  font-family: Lato, "Microsoft YaHei", sans-serif;
+  font-size: 1.25em;
+  margin: 0 0 0.1em 0;
+  margin-top: 0; }
+
+h5 {
+  font-family: Lato, "Microsoft YaHei", sans-serif;
+  font-size: 1.2em;
+  margin: 0 0 0.1em 0;
+  margin-top: 0; }
+
+h6 {
+  font-family: Lato, "Microsoft YaHei", sans-serif;
+  font-size: 1.1em;
+  margin: 0 0 0.1em 0;
+  margin-top: 0; }
+
+p {
+  font-size: 1.1em;
+  margin: 0.5em 0; }
+
+ul {
+  font-size: 1.1em; }
+
+body {
   background: #fff; }
 
 a {
@@ -5076,3 +5124,65 @@ section {
   height: 500px;
   background-color: #2f2946;
   border-bottom: 1px solid #5a4f86; }
+
+#basic h2 {
+  padding-top: 15px;
+  padding-bottom: 5px; }
+
+#basic h3 {
+  padding-bottom: 15px; }
+
+#senior h2 {
+  padding-top: 15px;
+  padding-bottom: 5px; }
+
+#senior h3 {
+  padding-bottom: 15px; }
+
+#customize h2 {
+  padding-top: 26px;
+  padding-bottom: 26px; }
+
+#basic.table {
+  margin-left: 40px; }
+
+.table {
+  text-align: center;
+  border-radius: 4px; }
+
+.head {
+  color: #fcfcfc; }
+
+.table {
+  line-height: 17pt; }
+
+.pink.table {
+  margin-top: 20px;
+  border: 2px solid #d0648a; }
+
+.purple.table {
+  margin-top: 40px;
+  border: 2px solid #2f2946; }
+
+.content {
+  margin: 10px; }
+
+.purple.table .head {
+  background-color: #2f2946; }
+
+.pink.table .head {
+  background-color: #d0648a; }
+
+.table button {
+  margin: 5px;
+  border-radius: 6px; }
+
+.purple.table button {
+  color: #2f2946;
+  background-color: #f3f3f3;
+  border: 2px solid #2f2946; }
+
+.pink.table button {
+  color: #fcfcfc;
+  background-color: #d0648a;
+  border: 2px solid #d0648a; }
