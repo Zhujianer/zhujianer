@@ -5095,7 +5095,8 @@ ul {
   font-size: 1.1em; }
 
 body {
-  background: #fff; }
+  background: #fff;
+  text-align: left; }
 
 a {
   text-decoration: none;
@@ -5124,6 +5125,83 @@ section {
   height: 500px;
   background-color: #2f2946;
   border-bottom: 1px solid #5a4f86; }
+
+#header-browser {
+  width: 100%;
+  height: 300px;
+  position: absolute;
+  top: 200px; }
+
+#header-browser-control {
+  width: 100%;
+  height: 40px;
+  background-color: #cecece;
+  border-radius: 10px 10px 0 0; }
+
+#header-browser-control-buttons {
+  height: 100%;
+  padding-left: 10px;
+  display: inline-block; }
+
+.header-browser-control-button {
+  width: 14px;
+  height: 14px;
+  border-radius: 7px;
+  display: inline-block;
+  margin: 13px 2px; }
+  .header-browser-control-button#header-browser-control-red {
+    background-color: #e76c6a; }
+  .header-browser-control-button#header-browser-control-yellow {
+    background-color: #dfbc43; }
+  .header-browser-control-button#header-browser-control-green {
+    background-color: #36d488; }
+
+#header-browser-tab {
+  display: inline-block;
+  margin: 0 20px;
+  width: 200px;
+  height: 28px;
+  background-color: #e3e3e3;
+  border-radius: 8px 8px 0 0;
+  position: relative; }
+
+#header-browser-tab-close {
+  width: 14px;
+  height: 14px;
+  border-radius: 7px;
+  position: absolute;
+  right: 10px;
+  top: 7px;
+  background-color: #cecece; }
+
+#header-browser-address-bar {
+  height: 36px;
+  background-color: #e3e3e3;
+  padding: 5px 10px;
+  position: relative; }
+  #header-browser-address-bar #header-browser-address-icons {
+    display: inline-block;
+    width: 130px; }
+    #header-browser-address-bar #header-browser-address-icons .glyphicon {
+      color: #969696;
+      font-size: 16px;
+      margin: 5px 5px; }
+      #header-browser-address-bar #header-browser-address-icons .glyphicon#header-browser-reload {
+        font-weight: bold; }
+
+#header-browser-address {
+  border-radius: 5px;
+  background-color: #fcfcfc;
+  position: absolute;
+  left: 135px;
+  right: 5px;
+  top: 5px;
+  bottom: 5px; }
+
+#header-browser-content {
+  width: 100%;
+  height: 224px;
+  background-color: #ebebeb; }
 
 #basic h2 {
   padding-top: 15px;

@@ -1,5 +1,21 @@
 $header-height: 500px;
 
+$header-browser-height: 300px;
+$header-browser-control-height: 40px;
+$header-browser-control-button-diameter: 14px;
+$header-browser-address-bar-height: 36px;
+$header-browser-address-icons-width: 130px;
+$header-browser-address-margin: 5px;
+$header-browser-content-height: $header-browser-height - $header-browser-control-height
+        - $header-browser-address-bar-height;
+
+$header-browser-control-color: #cecece;
+$header-browser-tab-color: #e3e3e3;
+$header-browser-icon-color: #969696;
+$header-browser-content-color: #ebebeb;
+
+
+
 .navbar {
     background-color: transparent;
     border-bottom: 1px solid $clr-primary-light;
@@ -27,4 +43,102 @@ $header-height: 500px;
     height: $header-height;
     background-color: $clr-primary;
     border-bottom: 1px solid $clr-primary-light;
+}
+
+#header-browser {
+    width: 100%;
+    height: $header-browser-height;
+    position: absolute;
+    top: $header-height - $header-browser-height;
+}
+
+#header-browser-control {
+    width: 100%;
+    height: $header-browser-control-height;
+    background-color: $header-browser-control-color;
+    border-radius: 10px 10px 0 0;
+}
+
+#header-browser-control-buttons {
+    height: 100%;
+    padding-left: 10px;
+    display: inline-block;
+}
+
+.header-browser-control-button {
+    width: $header-browser-control-button-diameter;
+    height: $header-browser-control-button-diameter;
+    border-radius: $header-browser-control-button-diameter / 2;
+    display: inline-block;
+    margin: ($header-browser-control-height - $header-browser-control-button-diameter) / 2 2px;
+
+    &#header-browser-control-red {
+        background-color: #e76c6a;
+    }
+
+    &#header-browser-control-yellow {
+        background-color: #dfbc43;
+    }
+
+    &#header-browser-control-green {
+        background-color: #36d488;
+    }
+}
+
+#header-browser-tab {
+    display: inline-block;
+    margin: 0 20px;
+    width: 200px;
+    height: $header-browser-control-height * 0.7;
+    background-color: $header-browser-tab-color;
+    border-radius: 8px 8px 0 0;
+    position: relative;
+}
+
+#header-browser-tab-close {
+    width: $header-browser-control-button-diameter;
+    height: $header-browser-control-button-diameter;
+    border-radius: $header-browser-control-button-diameter / 2;
+    position: absolute;
+    right: 10px;
+    top: ($header-browser-control-height * 0.7 - $header-browser-control-button-diameter) / 2;
+    background-color: $header-browser-control-color;
+}
+
+#header-browser-address-bar {
+    height: $header-browser-address-bar-height;
+    background-color: $header-browser-tab-color;
+    padding: 5px 10px;
+    position: relative;
+
+    #header-browser-address-icons {
+        display: inline-block;
+        width: $header-browser-address-icons-width;
+
+        .glyphicon {
+            color: $header-browser-icon-color;
+            font-size: 16px;
+            margin: 5px 5px;
+
+            &#header-browser-reload {
+                font-weight: bold;
+            }
+        }
+    }
+}
+
+#header-browser-address {
+    border-radius: 5px;
+    background-color: $clr-gray-lightest;
+    position: absolute;
+    left: $header-browser-address-icons-width + $header-browser-address-margin;
+    right: $header-browser-address-margin;
+    top: $header-browser-address-margin;
+    bottom: $header-browser-address-margin;
+}
+
+#header-browser-content {
+    width: 100%;
+    height: $header-browser-content-height;
+    background-color: $header-browser-content-color;
 }

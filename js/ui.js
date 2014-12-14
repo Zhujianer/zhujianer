@@ -1,8 +1,8 @@
 $(document).ready(function() {
-    if ($('#header--section')) {
+    /*if ($('#header--section')) {
         // index page, change nav background when scroll down
         indexScroll();
-    }
+    }*/
 });
 
 
