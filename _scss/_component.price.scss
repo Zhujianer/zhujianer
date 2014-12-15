@@ -1,32 +1,38 @@
 #price {
+    padding: 20px 0;
+
     .head {
-        color:$clr-gray-lightest;
+        color: $clr-gray-lightest;
     }
 
     .content {
-        margin :10px;
+        margin-top: 10px;
+
+        li {
+            list-style-type: none;
+            }
     }
 
     .table {
         text-align: center;
         border-radius: 4px;
-        line-height:17pt;
+        line-height: 17pt;
 
         button {
-            margin:5px;
+            margin: 5px;
             border-radius: 6px;
         }
 
         &.pink {
-            margin-top:20px;
+            margin-top: 20px;
             border: 2px solid $clr-secondary;
-            z-index:10;
-            position:relative;
-            background-color:$clr-gray-lighter;
+            z-index: 10;
+            position: relative;
+            background-color: $clr-gray-lighter;
         }
 
         &.purple {
-            margin-top:40px;
+            margin-top: 40px;
             border: 2px solid $clr-primary;
         }
 
@@ -37,7 +43,6 @@
         &.pink .head {
             background-color: $clr-secondary;
         }
-
 
         &.purple button {
             color: $clr-primary;
@@ -54,37 +59,38 @@
 
     #basic {
         h2 {
-            padding-top:15px;
-            padding-bottom:5px;   
+            padding-top: 15px;
+            padding-bottom: 5px;   
         }
-        h3 {
-            padding-bottom:15px;
+
+        h6 {
+            padding-bottom: 15px;
         }
+
         &.table {
-            margin-left:40px;
+            margin-left: 40px;
         }
     }
 
     #senior {
         h2 {
-            padding-top:15px;
-            padding-bottom:5px;        
+            padding-top: 15px;
+            padding-bottom: 5px;        
         }
-        h3 {
-            padding-bottom:15px;
+
+        h6 {
+            padding-bottom: 15px;
         }
     }
 
     #customize {
         h2 {
-            padding-top:26px;
-            padding-bottom:26px;
+            padding-top: 26px;
+            padding-bottom: 26px;
         }
+
         &.table {
-            margin-left:-40px;
+            margin-left: -40px;
         }
     }
-
 }
-
-
