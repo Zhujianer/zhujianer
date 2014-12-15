@@ -14,8 +14,13 @@ var messages = {
  */
 gulp.task('vendor', function() {
     gulp.src(['app/_bower_components/jquery/dist/jquery.min.js',
-            'app/_bower_components/jquery/dist/jquery.min.map'])
+            'app/_bower_components/jquery/dist/jquery.min.map',
+            'app/_bower_components/bootstrap/dist/js/bootstrap.min.js'])
         .pipe(gulp.dest('js'));
+    gulp.src('app/_bower_components/bootstrap/dist/css/bootstrap.min.css')
+        .pipe(gulp.dest('css'));
+    gulp.src('app/_bower_components/bootstrap/dist/fonts/*')
+        .pipe(gulp.dest('fonts'));
 });
 
 /**
