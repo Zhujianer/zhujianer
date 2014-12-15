@@ -5125,70 +5125,52 @@ section {
   background-color: #2f2946;
   border-bottom: 1px solid #5a4f86; }
 
-#basic h2 {
+#price .head {
+  color: #fcfcfc; }
+#price .content {
+  margin: 10px; }
+#price .table {
+  text-align: center;
+  border-radius: 4px;
+  line-height: 17pt; }
+  #price .table button {
+    margin: 5px;
+    border-radius: 6px; }
+  #price .table.pink {
+    margin-top: 20px;
+    border: 2px solid #d0648a;
+    z-index: 10;
+    position: relative;
+    background-color: #f3f3f3; }
+  #price .table.purple {
+    margin-top: 40px;
+    border: 2px solid #2f2946; }
+  #price .table.purple .head {
+    background-color: #2f2946; }
+  #price .table.pink .head {
+    background-color: #d0648a; }
+  #price .table.purple button {
+    color: #2f2946;
+    background-color: #f3f3f3;
+    border: 2px solid #2f2946; }
+  #price .table.pink button {
+    color: #fcfcfc;
+    background-color: #d0648a;
+    border: 2px solid #d0648a; }
+#price #basic h2 {
   padding-top: 15px;
   padding-bottom: 5px; }
-
-#basic h3 {
+#price #basic h3 {
   padding-bottom: 15px; }
-
-#senior h2 {
+#price #basic.table {
+  margin-left: 40px; }
+#price #senior h2 {
   padding-top: 15px;
   padding-bottom: 5px; }
-
-#senior h3 {
+#price #senior h3 {
   padding-bottom: 15px; }
-
-#customize h2 {
+#price #customize h2 {
   padding-top: 26px;
   padding-bottom: 26px; }
-
-#basic.table {
-  margin-left: 40px; }
-
-#customize.table {
+#price #customize.table {
   margin-left: -40px; }
-
-.table {
-  text-align: center;
-  border-radius: 4px; }
-
-.head {
-  color: #fcfcfc; }
-
-.table {
-  line-height: 17pt; }
-
-.pink.table {
-  margin-top: 20px;
-  border: 2px solid #d0648a;
-  z-index: 10;
-  position: relative;
-  background-color: #f3f3f3; }
-
-.purple.table {
-  margin-top: 40px;
-  border: 2px solid #2f2946; }
-
-.content {
-  margin: 10px; }
-
-.purple.table .head {
-  background-color: #2f2946; }
-
-.pink.table .head {
-  background-color: #d0648a; }
-
-.table button {
-  margin: 5px;
-  border-radius: 6px; }
-
-.purple.table button {
-  color: #2f2946;
-  background-color: #f3f3f3;
-  border: 2px solid #2f2946; }
-
-.pink.table button {
-  color: #fcfcfc;
-  background-color: #d0648a;
-  border: 2px solid #d0648a; }
