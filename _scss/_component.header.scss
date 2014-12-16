@@ -27,7 +27,6 @@ $header-mobile-speaker-color: #999;
 
 
 .navbar {
-    background-color: transparent;
     border-bottom: 1px solid $clr-primary-light;
     
     a {
@@ -41,18 +40,34 @@ $header-mobile-speaker-color: #999;
     .nav > li > a:hover, .nav > li > a:focus {
         background-color: $clr-primary-dark;
     }
-    
-    &.down {
-        background-color: $clr-primary;
-    }
+}
+
+
+
+.smoke-back {
+    background-image: url(../img/home-back.png);
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-color: $clr-primary;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
 }
 
 
 
 .header-section {
     height: $header-height;
-    background-color: $clr-primary;
     border-bottom: 1px solid $clr-primary-light;
+
+    // make sure the following sections cover the overflowed part
+    &~section {
+        position: relative;
+        z-index: 100;
+    }
 }
 
 #header-browser {

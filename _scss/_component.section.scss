@@ -6,3 +6,25 @@ section {
         background-color: $clr-gray-lighter;
     }
 }
+
+#footer-section {
+	padding: 100px 0;
+	color: $clr-txt-on-dark;
+	text-align: center;
+
+	li {
+		display: inline-block;
+		margin: 0 20px;
+		font-size: $ft-sz-lg;
+	}
+
+	a {
+		color: $clr-txt-on-dark;
+	}
+
+	hr {
+		width: 75%;
+		margin: 20px auto;
+		margin-bottom: 30px;
+	}
+}
