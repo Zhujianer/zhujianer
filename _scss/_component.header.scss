@@ -1,6 +1,6 @@
-$header-height: 500px;
+$header-height: 600px;
 
-$header-browser-height: 300px;
+$header-browser-height: 250px;
 $header-browser-control-height: 40px;
 $header-browser-control-button-diameter: 14px;
 $header-browser-address-bar-height: 36px;
@@ -13,6 +13,16 @@ $header-browser-control-color: #cecece;
 $header-browser-tab-color: #e3e3e3;
 $header-browser-icon-color: #969696;
 $header-browser-content-color: #ebebeb;
+
+$header-mobile-width: 250px;
+$header-mobile-height: 350px;
+$header-mobile-screen-top: 45px;
+$header-mobile-screen-left: 8px;
+$header-mobile-side-width: 6px;
+
+$header-mobile-back-color: #efefef;
+$header-mobile-iron-color: #ccc;
+$header-mobile-speaker-color: #999;
 
 
 
@@ -48,8 +58,8 @@ $header-browser-content-color: #ebebeb;
 #header-browser {
     width: 100%;
     height: $header-browser-height;
-    position: absolute;
-    top: $header-height - $header-browser-height;
+    //position: absolute;
+    margin-top: $header-height - $header-browser-height;
 }
 
 #header-browser-control {
@@ -141,4 +151,51 @@ $header-browser-content-color: #ebebeb;
     width: 100%;
     height: $header-browser-content-height;
     background-color: $header-browser-content-color;
+}
+
+
+
+#header-mobile {
+    width: $header-mobile-width;
+    height: $header-mobile-height;
+    margin-top: -$header-mobile-height;
+    background-color: $header-mobile-back-color;
+    border: 2px $header-mobile-iron-color;
+    border-style: solid solid none solid;
+    border-radius: 30px 30px 0 0;
+    float: right;
+    position: relative;
+    z-index: 10;
+}
+
+#header-mobile-speaker {
+    width: 40px;
+    height: 4px;
+    border-radius: 2px;
+    background-color: $header-mobile-speaker-color;
+    margin: 20px auto;
+}
+
+#header-mobile-screen {
+    background-color: $clr-primary;
+    position: absolute;
+    left: $header-mobile-screen-left;
+    right: $header-mobile-screen-left;
+    top: $header-mobile-screen-top;
+    bottom: 0;
+}
+
+#header-mobile-side {
+    width: $header-mobile-side-width;
+    position: relative;
+    left: -$header-mobile-side-width;
+    top: 45px;
+
+    .header-mobile-side-btn {
+        width: 100%;
+        height: 35px;
+        background-color: $header-mobile-back-color;
+        border: 2px solid $header-mobile-iron-color;
+        margin-bottom: 5px;
+    }
 }

@@ -20,7 +20,7 @@ gulp.task('vendor', function() {
     gulp.src('app/_bower_components/bootstrap/dist/css/bootstrap.min.css')
         .pipe(gulp.dest('css'));
     gulp.src('app/_bower_components/bootstrap/dist/fonts/*')
-        .pipe(gulp.dest('fonts'));
+        .pipe(gulp.dest('app/fonts'));
 });
 
 /**
