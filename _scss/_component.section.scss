@@ -1,6 +1,8 @@
 section {
     min-height: 300px;  // TODO: tmp value
     background-color: $clr-gray-lightest;
+    padding: 40px 0;
+
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -9,9 +11,9 @@ section {
     .imgdiv {
         background-color: $clr-secondary;
         min-height:200px;
-		max-width:300px;
+        max-width:300px;
     }
- 
+
     &:nth-child(even) {
         background-color: $clr-gray-lighter;  
         .imgdiv {

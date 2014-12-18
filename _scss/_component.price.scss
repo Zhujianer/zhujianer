@@ -1,6 +1,4 @@
 #price {
-    padding: 20px 0;
-
     .head {
         color: $clr-gray-lightest;
     }
@@ -17,6 +15,7 @@
         text-align: center;
         border-radius: 4px;
         line-height: 17pt;
+        max-width: 300px;       
 
         button {
             margin: 5px;
@@ -94,3 +93,11 @@
         }
     }
 }
+
+@media screen and (max-width: 768px) {
+    #price .table {
+        margin-left: 0 !important;
+        margin: 10px auto !important;
+    }   
+}
+
