@@ -1,10 +1,29 @@
 section {
     min-height: 300px;  // TODO: tmp value
     background-color: $clr-gray-lightest;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
     
-    &:nth-child(even) {
-        background-color: $clr-gray-lighter;
+    .imgdiv {
+        background-color: $clr-secondary;
+        min-height:200px;
+		max-width:300px;
     }
+ 
+    &:nth-child(even) {
+        background-color: $clr-gray-lighter;  
+        .imgdiv {
+            background-color: $clr-primary;
+            min-height:200px;
+        }
+    }
+}
+
+.imgdiv img {
+    max-height:100%;
+    max-width:100%;
 }
 
 #footer-section {
