@@ -1,4 +1,4 @@
-section {
+#introduction {
     min-height: 300px;  // TODO: tmp value
     background-color: $clr-gray-lightest;
     padding: 40px 0;
@@ -8,10 +8,15 @@ section {
     align-items: center;
     justify-content: center;
     
+	.introduction-p {
+        padding: 0px 0px;
+        text-align: justify;
+        text-justify: inter-ideograph;
+    }
+	
     .imgdiv {
         background-color: $clr-secondary;
         min-height:200px;
-        max-width:300px;
     }
 
     &:nth-child(even) {
