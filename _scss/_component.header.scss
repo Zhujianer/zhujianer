@@ -1,6 +1,8 @@
-$header-height: 500px;
+$header-height: 600px;
 
-$header-browser-height: 300px;
+$header-browser-content-height: 200px;
+
+$header-browser-height: 180px;
 $header-browser-control-height: 40px;
 $header-browser-control-button-diameter: 14px;
 $header-browser-address-bar-height: 36px;
@@ -14,12 +16,19 @@ $header-browser-tab-color: #e3e3e3;
 $header-browser-icon-color: #969696;
 $header-browser-content-color: #ebebeb;
 
+$header-mobile-width: 250px;
+$header-mobile-height: 250px;
+$header-mobile-screen-top: 45px;
+$header-mobile-screen-left: 8px;
+$header-mobile-side-width: 6px;
+
+$header-mobile-back-color: #efefef;
+$header-mobile-iron-color: #ccc;
+$header-mobile-speaker-color: #999;
+
 
 
 .navbar {
-    background-color: transparent;
-    border-bottom: 1px solid $clr-primary-light;
-    
     a {
         color: $clr-gray-lighter;
     }
@@ -29,27 +38,76 @@ $header-browser-content-color: #ebebeb;
     }
     
     .nav > li > a:hover, .nav > li > a:focus {
-        background-color: $clr-primary-dark;
-    }
-    
-    &.down {
         background-color: $clr-primary;
     }
 }
 
 
 
+.smoke-back {
+    background-image: url(../img/home-back.png);
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-color: $clr-primary;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+
+
 .header-section {
     height: $header-height;
-    background-color: $clr-primary;
     border-bottom: 1px solid $clr-primary-light;
+
+    // make sure the following sections cover the overflowed part
+    &~section {
+        position: relative;
+        z-index: 100;
+    }
 }
+
+
+
+#header-content {
+    text-align: center;
+    padding-top: 100px;
+    position: relative;
+    height: $header-browser-content-height;
+    margin-bottom: -$header-browser-content-height;
+    color: $clr-gray-lighter;
+
+    .logo-primary {
+        transition: 1s;
+
+        &:hover {
+            background-color: $clr-secondary;
+        };
+    }
+
+    .zhujianer-title {
+        margin: 10px 0;
+    }
+
+    .subtitle {
+        color: $clr-secondary;
+        margin: 10px 0 30px 0;
+    }
+
+    .description {
+        color: $clr-gray;
+    }
+}
+
+
 
 #header-browser {
     width: 100%;
     height: $header-browser-height;
-    position: absolute;
-    top: $header-height - $header-browser-height;
+    margin-top: $header-height - $header-browser-height;
 }
 
 #header-browser-control {
@@ -140,5 +198,53 @@ $header-browser-content-color: #ebebeb;
 #header-browser-content {
     width: 100%;
     height: $header-browser-content-height;
-    background-color: $header-browser-content-color;
+    border: 2px solid $header-browser-content-color;
+    border-bottom-style: none;
+}
+
+
+
+#header-mobile {
+    width: $header-mobile-width;
+    height: $header-mobile-height;
+    margin-top: -$header-mobile-height;
+    background-color: $header-mobile-back-color;
+    border: 2px $header-mobile-iron-color;
+    border-style: solid solid none solid;
+    border-radius: 30px 30px 0 0;
+    float: right;
+    position: relative;
+    z-index: 10;
+}
+
+#header-mobile-speaker {
+    width: 40px;
+    height: 4px;
+    border-radius: 2px;
+    background-color: $header-mobile-speaker-color;
+    margin: 20px auto;
+}
+
+#header-mobile-screen {
+    background-color: $clr-primary;
+    position: absolute;
+    left: $header-mobile-screen-left;
+    right: $header-mobile-screen-left;
+    top: $header-mobile-screen-top;
+    bottom: 0;
+}
+
+#header-mobile-side {
+    width: $header-mobile-side-width;
+    position: relative;
+    left: -$header-mobile-side-width;
+    top: 45px;
+
+    .header-mobile-side-btn {
+        width: 100%;
+        height: 35px;
+        background-color: $header-mobile-back-color;
+        border: 2px solid $header-mobile-iron-color;
+        margin-bottom: 5px;
+    }
 }

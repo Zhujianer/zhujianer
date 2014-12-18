@@ -1,26 +1,30 @@
 $(document).ready(function() {
-    /*if ($('#header--section')) {
-        // index page, change nav background when scroll down
+    if ($('#header--section')) {
         indexScroll();
-    }*/
+    }
 });
 
 
 
-// Change nav background when scroll down.
-// Use transparent background when scroll up to header
-// because there would be fancy effects on the background.
+// Change browser and mobile position when scroll down.
 function indexScroll() {
+    var headerBrowserHeight = $('#index-header').height() + 1
+            - $('#header-browser').height();
+    var headerMobileHeight = $('#header-mobile').height();
     $(window).scroll(function(e) {
-        if (!$('.navbar').hasClass('down')) {
-            var headerHeight = $('#index-header').height() - $('.navbar').height();
-            if ($(window).scrollTop() >= headerHeight) {
-                // scrolled down
-                $('.navbar').addClass('down');
-            }
-        } else if ($(window).scrollTop() < headerHeight) {
-            // scrolled up
-            $('.navbar').removeClass('down');
+        var headerHeight = $('#index-header').height() - $('.navbar').height();
+        var top = $(window).scrollTop();
+        var ratio = !headerHeight ? 0 : top / headerHeight;
+        if (headerHeight - top) {
+            // home section visible
+            $('#header-mobile').css({
+                'margin-top': -headerMobileHeight + top * 0.2,
+                'opacity': 1 - ratio * ratio
+            });
+            $('#header-browser').css({
+                'margin-top': headerBrowserHeight + top * 0.4,
+                'opacity': 1 - ratio
+            });
         }
     })
 }
