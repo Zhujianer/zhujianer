@@ -17,6 +17,10 @@
         
         <script type="text/javascript" src="js/jquery.min.js"></script>
         <script type="text/javascript" src="js/bootstrap.min.js"></script>
+        {% if page.url == '/index.html' %}
+        <link rel="stylesheet" href="/css/tooltipster.css" />
+        <script type="text/javascript" src="js/jquery.tooltipster.min.js"></script>
+        {% endif %}
         <script type="text/javascript" src="js/ui.js"></script>
     </body>
 </html>

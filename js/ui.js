@@ -1,6 +1,8 @@
 $(document).ready(function() {
     if ($('#header--section')) {
+        // index page
         indexScroll();
+        indexTooltip();
     }
 });
 
@@ -28,8 +30,66 @@ function indexScroll() {
         }
         if (top > 0) {
             $('.navbar').addClass('bordered');
+
+            // hide tooltip
+            cancelTooltip();
         } else {
             $('.navbar').removeClass('bordered');
         }
     })
+}
+
+
+
+// Show tooltip in index page when hover or randomly
+var tooltipHandle = null;
+function indexTooltip() {
+    // Init
+    $('.logo-primary.tooltip').tooltipster({
+        theme: 'home-tooltip',
+        animation: 'swing',
+        autoClose: false,
+        position: 'left'
+    });
+    $('.subtitle.tooltip').tooltipster({
+        theme: 'home-tooltip',
+        animation: 'swing',
+        autoClose: false,
+        offsetX: 140
+    });
+    $('#header-browser.tooltip').tooltipster({
+        theme: 'home-tooltip',
+        animation: 'swing',
+        autoClose: false,
+        offsetX: -80
+    });
+    $('#header-mobile.tooltip').tooltipster({
+        theme: 'home-tooltip',
+        animation: 'swing',
+        position: 'left',
+        autoClose: false,
+        offsetY: -80
+    });
+
+    // Show one tooltip in every other 5 seconds
+    $($('.tooltip')[0]).tooltipster('show');
+    var id = 1;
+    var len = $('.tooltip').length;
+    tooltipHandle = setInterval(function() {
+        if (id === len) {
+            $('.tooltip').tooltipster('hide');
+            id = 0;
+            return;
+        }
+        $($('.tooltip')[id]).tooltipster('show');
+        ++id;
+    }, 2000);
+}
+
+function cancelTooltip() {
+    if (tooltipHandle) {
+        clearInterval(tooltipHandle);
+        tooltipHandle = null;
+    }
+    $('.tooltip').tooltipster('hide');
 }

@@ -65,6 +65,24 @@ $header-mobile-speaker-color: #999;
 
 
 
+.home-tooltip {
+    border-radius: 4px;
+    background: $clr-secondary;
+    color: $clr-txt-on-dark;
+
+    .tooltipster-content {
+        font-family: $ft-fm-def;
+        font-size: $ft-sz-lg;
+        padding: 16px 20px;
+    }
+
+    .tooltipster-base {
+        z-index: 10;
+    }
+}
+
+
+
 .header-section {
     height: $header-height;
     border-bottom: 1px solid $clr-primary-light;
@@ -87,8 +105,11 @@ $header-mobile-speaker-color: #999;
     margin-bottom: -$header-browser-content-height;
     color: $clr-gray-lighter;
 
-    .logo-primary {
+    .logo-primary.tooltip {
         transition: 1s;
+        opacity: 1.0;
+        position: static;
+        display: inline-block;
 
         &:hover {
             background-color: $clr-gray-light;
@@ -100,9 +121,13 @@ $header-mobile-speaker-color: #999;
         margin: 10px 0;
     }
 
-    .subtitle {
+    .subtitle.tooltip {
         color: $clr-secondary;
-        margin: 10px 0 30px 0;
+        margin: 0 0 30px 0;
+        opacity: 1.0;
+        position: static;
+        display: inline-block;
+        font-size: 2.8rem;
 
         span {
             display: inline-block;
@@ -116,10 +141,12 @@ $header-mobile-speaker-color: #999;
 
 
 
-#header-browser {
+#header-browser.tooltip {
     width: 100%;
     height: $header-browser-height;
     margin-top: $header-height - $header-browser-height;
+    position: static;
+    opacity: 1.0;
 }
 
 #header-browser-control {
@@ -216,7 +243,7 @@ $header-mobile-speaker-color: #999;
 
 
 
-#header-mobile {
+#header-mobile.tooltip {
     width: $header-mobile-width;
     max-width: 50%;
     height: $header-mobile-height;
@@ -228,6 +255,8 @@ $header-mobile-speaker-color: #999;
     float: right;
     position: relative;
     z-index: 10;
+    opacity: 1.0;
+    display: block;
 }
 
 #header-mobile-speaker {
