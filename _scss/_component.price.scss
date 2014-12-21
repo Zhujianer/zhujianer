@@ -1,6 +1,7 @@
 #price {
     .head {
         color: $clr-gray-lightest;
+        height: 90px;
     }
 
     .content {
@@ -14,8 +15,7 @@
     .table {
         text-align: center;
         border-radius: 4px;
-        line-height: 17pt;
-        max-width: 300px;       
+        line-height: 17pt;  
 
         button {
             margin: 5px;
@@ -84,8 +84,8 @@
 
     #customize {
         h2 {
-            padding-top: 26px;
-            padding-bottom: 26px;
+            padding-top: 30px;
+            padding-bottom: 30px;
         }
 
         &.table {
@@ -98,6 +98,7 @@
     #price .table {
         margin-left: 0 !important;
         margin: 10px auto !important;
+        max-width: 300px;
     }   
 }
 

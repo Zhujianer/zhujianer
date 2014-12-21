@@ -29,6 +29,8 @@ $header-mobile-speaker-color: #999;
 
 
 .navbar {
+    background-color: $clr-primary;
+
     a {
         color: $clr-gray-lighter;
     }
@@ -62,6 +64,7 @@ $header-mobile-speaker-color: #999;
 .header-section {
     height: $header-height;
     border-bottom: 1px solid $clr-primary-light;
+    overflow: hidden;
 
     // make sure the following sections cover the overflowed part
     &~section {
@@ -89,6 +92,7 @@ $header-mobile-speaker-color: #999;
     }
 
     .zhujianer-title {
+        color: $clr-thirdary;
         margin: 10px 0;
     }
 
