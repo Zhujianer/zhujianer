@@ -87,7 +87,7 @@ $header-mobile-speaker-color: #999;
         transition: 1s;
 
         &:hover {
-            background-color: $clr-secondary;
+            background-color: $clr-gray-light;
         };
     }
 
@@ -99,6 +99,10 @@ $header-mobile-speaker-color: #999;
     .subtitle {
         color: $clr-secondary;
         margin: 10px 0 30px 0;
+
+        span {
+            display: inline-block;
+        }
     }
 
     .description {
@@ -210,6 +214,7 @@ $header-mobile-speaker-color: #999;
 
 #header-mobile {
     width: $header-mobile-width;
+    max-width: 50%;
     height: $header-mobile-height;
     margin-top: -$header-mobile-height;
     background-color: $header-mobile-back-color;
