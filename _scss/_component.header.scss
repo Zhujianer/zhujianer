@@ -42,6 +42,10 @@ $header-mobile-speaker-color: #999;
     .nav > li > a:hover, .nav > li > a:focus {
         background-color: $clr-primary;
     }
+
+    &.bordered {
+        box-shadow: 0 0 10px 2px $clr-primary;
+    }
 }
 
 
