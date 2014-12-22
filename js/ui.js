@@ -70,6 +70,12 @@ function indexTooltip() {
         autoClose: false,
         offsetY: -80
     });
+    $('#header-mobile-logo-gif.tooltip').tooltipster({
+        theme: 'home-tooltip',
+        animation: 'swing',
+        position: 'bottom',
+        autoClose: false
+    });
 
     // Show one tooltip in every other 5 seconds
     $($('.tooltip')[0]).tooltipster('show');

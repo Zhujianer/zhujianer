@@ -110,10 +110,7 @@ $header-mobile-speaker-color: #999;
         opacity: 1.0;
         position: static;
         display: inline-block;
-
-        &:hover {
-            background-color: $clr-gray-light;
-        };
+        border-radius: 40px;
     }
 
     .zhujianer-title {
@@ -239,6 +236,15 @@ $header-mobile-speaker-color: #999;
     height: $header-browser-content-height;
     border: 2px solid $header-browser-content-color;
     border-bottom-style: none;
+}
+
+#header-mobile-logo-gif.tooltip {
+    border-radius: 40px;
+    margin: 40px auto;
+    opacity: 1.0;
+    display: block;
+    width: 80px;
+    position: relative;
 }
 
 
