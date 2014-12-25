@@ -50,6 +50,16 @@ $header-mobile-speaker-color: #999;
 
 
 
+.navbar-toggle {
+    border: 0;
+
+    .icon-bar {
+        background-color: $clr-gray-lighter;
+    }
+}
+
+
+
 .smoke-back {
     background-image: url(../img/home-back.png);
     background-size: cover;
