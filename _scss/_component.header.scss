@@ -61,16 +61,9 @@ $header-mobile-speaker-color: #999;
 
 
 .smoke-back {
-    background-image: url(../img/home-back.png);
-    background-size: cover;
-    background-attachment: fixed;
-    background-repeat: no-repeat;
-    background-position: center center;
     background-color: $clr-primary;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
+    background-image: url(../img/home-back.png);
+    @include cover-image;
 }
 
 
@@ -135,10 +128,6 @@ $header-mobile-speaker-color: #999;
         position: static;
         display: inline-block;
         font-size: 2.8rem;
-
-        span {
-            display: inline-block;
-        }
     }
 
     .description {

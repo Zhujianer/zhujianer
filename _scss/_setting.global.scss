@@ -2,3 +2,11 @@ body {
     background: #fff;
     text-align: left;
 }
+
+
+
+// display in one line when possible and split into lines
+// when on mobile devices
+.mobile-split {
+    display: inline-block;
+}

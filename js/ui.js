@@ -3,6 +3,7 @@ $(document).ready(function() {
         // index page
         indexScroll();
         indexTooltip();
+        indexProcess();
     }
 });
 
@@ -98,4 +99,16 @@ function cancelTooltip() {
         tooltipHandle = null;
     }
     $('.tooltip').tooltipster('hide');
+}
+
+
+
+// index process section
+function indexProcess() {
+    // show related description when hover on image
+    $($('.process-title')[0]).show();
+    $('.process-image').hover(function() {
+        $('.process-title').hide();
+        $($('.process-title')[$(this).index()]).show();
+    });
 }
