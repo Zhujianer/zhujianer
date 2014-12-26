@@ -1,0 +1,31 @@
+// small
+@media screen and (max-width: 768px) {
+    // price section in index.html
+    #price .table {
+        margin-left: 0 !important;
+        margin: 10px auto !important;
+        max-width: 300px;
+    }
+
+
+
+    // process section in index.html
+    .process {
+        width: 160px;
+        height: 160px;
+        border-radius: 80px;
+        margin-top: 40px;
+    }
+}
+
+
+
+// medium
+@media screen and (min-width: 768px) and (max-width: 992px) {
+    // process section in index.html
+    .process {
+        width: 80px;
+        height: 80px;
+        border-radius: 40px;
+    }
+}

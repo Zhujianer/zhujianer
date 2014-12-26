@@ -2,6 +2,7 @@
     .head {
         color: $clr-gray-lightest;
         height: 90px;
+        padding: 20px 0;
     }
 
     .content {
@@ -15,7 +16,8 @@
     .table {
         text-align: center;
         border-radius: 4px;
-        line-height: 17pt;  
+        line-height: 17pt;
+        background-color: $clr-gray-lighter;
 
         button {
             margin: 5px;
@@ -27,7 +29,6 @@
             border: 2px solid $clr-secondary;
             z-index: 10;
             position: relative;
-            background-color: $clr-gray-lighter;
         }
 
         &.purple {
@@ -57,48 +58,14 @@
     }
 
     #basic {
-        h2 {
-            padding-top: 15px;
-            padding-bottom: 5px;   
-        }
-
-        h6 {
-            padding-bottom: 15px;
-        }
-
         &.table {
             margin-left: 40px;
         }
     }
 
-    #senior {
-        h2 {
-            padding-top: 15px;
-            padding-bottom: 5px;        
-        }
-
-        h6 {
-            padding-bottom: 15px;
-        }
-    }
-
     #customize {
-        h2 {
-            padding-top: 30px;
-            padding-bottom: 30px;
-        }
-
         &.table {
             margin-left: -40px;
         }
     }
 }
-
-@media screen and (max-width: 768px) {
-    #price .table {
-        margin-left: 0 !important;
-        margin: 10px auto !important;
-        max-width: 300px;
-    }   
-}
-
