@@ -5,6 +5,9 @@ var prefix      = require('gulp-autoprefixer');
 var cp          = require('child_process');
 var scsslint = require('gulp-scsslint');
 
+//Fix Node.js Child Process ENOENT Error on Windows
+var jekyll = process.platform === "win32" ? "jekyll.bat" : "jekyll";
+
 var messages = {
     jekyllBuild: '<span style="color: grey">Running:</span> $ jekyll build'
 };
@@ -31,7 +34,7 @@ gulp.task('vendor', function() {
 gulp.task('jekyll-build', function (done) {
     browserSync.notify(messages.jekyllBuild);
     gulp.run('vendor');
-    return cp.spawn('jekyll', ['build'], {stdio: 'inherit'})
+    return cp.spawn(jekyll, ['build'], {stdio: 'inherit'})
         .on('close', done);
 });
 
@@ -84,7 +87,7 @@ gulp.task('lint', function() {
  */
 gulp.task('watch', function () {
     gulp.watch('_scss/*.scss', ['sass']);
-    gulp.watch(['index.html', '_layouts/*.html', '_posts/*'], ['jekyll-rebuild']);
+    gulp.watch(['*.html', '_layouts/*', '_posts/*', '_includes/*'], ['jekyll-rebuild']);
 });
 
 /**
