@@ -75,12 +75,39 @@ section {
             }
         };
 
-        @include index-process-icon(idea);
-        @include index-process-icon(design);
-        @include index-process-icon(code);
-        @include index-process-icon(launch);
-        @include index-process-icon(monitor);
-        
+        .image-block {
+            width: 90%;
+            height: 90%;
+            background-size: 500%;
+            margin: 0 auto;
+            position: relative;
+            top: 5%;
+            background-image: url('../img/process.png');
+
+            &:hover {
+                background-position-y: 100%;
+            };
+        }
+
+        &#process-idea .image-block {
+            background-position-x: 0;
+        }
+
+        &#process-design .image-block {
+            background-position-x: 100%;
+        }
+
+        &#process-code .image-block {
+            background-position-x: 200%;
+        }
+
+        &#process-launch .image-block {
+            background-position-x: 300%;
+        }
+
+        &#process-monitor .image-block {
+            background-position-x: 400%;
+        }
     }
 
     #process-titles {

@@ -7,21 +7,3 @@
          -o-background-size: cover;
             background-size: cover;
 }
-
-
-
-@mixin index-process-icon($name) {
-    &#process-#{$name} .image-block {
-        width: 90%;
-        height: 90%;
-        background-image: url('../img/#{$name}.png');
-        background-size: cover;
-        margin: 0 auto;
-        position: relative;
-        top: 5%;
-
-        &:hover {
-            background-image: url('../img/#{$name}-secondary.png');
-        };
-    }
-}
