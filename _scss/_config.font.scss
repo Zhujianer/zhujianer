@@ -30,9 +30,11 @@ $ft-sz-smer: 0.8rem;
 $ft-sz-lg:   1.5rem;
 
 $ft-sz: 3rem, 2.5rem, 1.8rem, 1.75rem, 1.5rem, 1.25rem;
-$ft-mg: 1.8rem, 1.5rem, 1.2rem, 1rem, 0.8rem, 0.6rem;
+$ft-mg: 1.25rem, 1.2rem, 1rem, 0.8rem, 0.5rem, 0.4rem;
 
 $ft-sz-qt: 1rem;
+
+$line-height: 1.25;
 
 
 
@@ -43,6 +45,7 @@ body {
     font-family: $ft-fm-def;
     font-weight: $ft-wt-def;
     font-size: $ft-sz-def;
+    line-height: $ft-sz-def * $line-height;
 }
 
 
@@ -52,12 +55,14 @@ body {
         font-family: $ft-fm-def;
         font-size: nth($ft-sz, $i);
         margin: 0 0 nth($ft-mg, $i) 0;
+        line-height: nth($ft-sz, $i) * $line-height;
     }
 }
 
 p {
     font-size: $ft-sz-def;
     margin: 0.5rem 0;
+    line-height: $ft-sz-def * $line-height;
 }
 
 ul {

@@ -49,9 +49,14 @@ section {
 
     #process-images {
         color: $clr-primary;
+        line-height: 2.2rem;
+
+        h3 {
+            margin-top: 20px;
+        }
 
         h4 {
-            margin-top: 20px;
+            display: none;
         }
     }
 
@@ -84,7 +89,7 @@ section {
         .process-title {
             display: none;
 
-            .title {
+            .process-highlight {
                 color: $clr-secondary;
             }
         }

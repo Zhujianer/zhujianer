@@ -10,11 +10,28 @@
 
 
     // process section in index.html
-    #process-section .process {
-        width: 120px;
-        height: 120px;
-        border-radius: 80px;
-        margin-top: 40px;
+    #process-section {
+        .process {
+            width: 120px;
+            height: 120px;
+            border-radius: 80px;
+            margin-top: 40px;
+        }
+
+        #process-images {
+            h3 {
+                color: $clr-secondary;
+                font-size: nth($ft-sz, 2);
+            }
+
+            h4 {
+                display: block;
+            }
+        }
+
+        #process-titles {
+            display: none;
+        }
     }
 }
 
@@ -28,10 +45,6 @@
             width: 80px;
             height: 80px;
             border-radius: 40px;
-        }
-
-        #process-titles {
-            display: none;
         }
     }
 }
