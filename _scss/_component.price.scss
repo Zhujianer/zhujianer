@@ -3,6 +3,10 @@
         color: $clr-gray-lightest;
         height: 90px;
         padding: 20px 0;
+
+        h2 {
+            margin-bottom: 10px;
+        }
     }
 
     .content {
@@ -17,7 +21,7 @@
         text-align: center;
         border-radius: 4px;
         line-height: 17pt;
-        background-color: $clr-gray-lighter;
+        background-color: $clr-gray-lightest;
 
         button {
             margin: 5px;

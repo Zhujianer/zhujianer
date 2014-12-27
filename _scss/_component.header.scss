@@ -33,6 +33,12 @@ $header-mobile-speaker-color: #999;
 
     a {
         color: $clr-gray-lighter;
+        font-weight: normal;
+        font-size: $ft-sz-sm;
+
+        &:hover {
+            color: $clr-secondary;
+        };
     }
     
     .active > a {
@@ -44,7 +50,8 @@ $header-mobile-speaker-color: #999;
     }
 
     &.bordered {
-        box-shadow: 0 0 10px 2px $clr-primary;
+        box-shadow: 0 0 10px 2px $clr-primary-dark;
+        border-bottom: 1px $clr-primary-dark;
     }
 }
 

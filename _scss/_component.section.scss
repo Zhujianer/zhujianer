@@ -99,17 +99,25 @@ section {
 
 	li {
 		display: inline-block;
-		margin: 0 20px;
+		margin: 0 15px;
 		font-size: $ft-sz-lg;
 	}
 
 	a {
 		color: $clr-txt-on-dark;
+        font-weight: normal;
+
+        &:hover {
+            color: $clr-secondary;
+            text-decoration: none;
+        };
 	}
 
 	hr {
 		width: 75%;
 		margin: 20px auto;
 		margin-bottom: 30px;
+        border: 0;
+        border-bottom: 1px solid $clr-thirdary;
 	}
 }
