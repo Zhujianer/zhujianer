@@ -44,6 +44,7 @@ $header-mobile-speaker-color: #999;
     
     .active > a {
         font-weight: bold;
+        color: $clr-thirdary;
     }
     
     .nav > li > a:hover, .nav > li > a:focus {

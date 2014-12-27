@@ -1,37 +1,13 @@
 section {
     padding: 80px 0;
-}
-
-
-
-.introduction {
-    min-height: 300px;  // TODO: tmp value
     background-color: $clr-gray-lightest;
 
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    
-	.introduction-p {
-        padding: 0px 0px;
-        text-align: justify;
-        text-justify: inter-ideograph;
-    }
-	
-    .imgdiv {
-        background-color: $clr-secondary;
-        min-height:200px;
-    }
-
     &:nth-child(even) {
-        background-color: $clr-gray-lighter;  
-        .imgdiv {
-            background-color: $clr-primary;
-            min-height:200px;
-        }
+        background-color: $clr-gray-lighter;
     }
 }
+
+
 
 .imgdiv img {
     max-height: 100%;
@@ -133,6 +109,10 @@ section {
 		display: inline-block;
 		margin: 0 15px;
 		font-size: $ft-sz-lg;
+
+        &.active > a {
+            font-weight: bold;
+        }
 	}
 
 	a {
@@ -151,6 +131,10 @@ section {
 		margin: 20px auto;
 		margin-bottom: 30px;
         border: 0;
-        border-bottom: 1px solid $clr-thirdary;
+        border-bottom: 1px solid $clr-secondary;
 	}
+
+    h3 {
+        color: $clr-thirdary;
+    }
 }
