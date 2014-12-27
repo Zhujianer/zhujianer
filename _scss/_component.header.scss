@@ -35,6 +35,7 @@ $header-mobile-speaker-color: #999;
         color: $clr-gray-lighter;
         font-weight: normal;
         font-size: $ft-sz-sm;
+        transition: 0.5s;
 
         &:hover {
             color: $clr-secondary;

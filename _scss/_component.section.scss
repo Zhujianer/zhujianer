@@ -94,19 +94,19 @@ section {
         }
 
         &#process-design .image-block {
-            background-position-x: 100%;
+            background-position-x: -100%;
         }
 
         &#process-code .image-block {
-            background-position-x: 200%;
+            background-position-x: -200%;
         }
 
         &#process-launch .image-block {
-            background-position-x: 300%;
+            background-position-x: -300%;
         }
 
         &#process-monitor .image-block {
-            background-position-x: 400%;
+            background-position-x: -400%;
         }
     }
 
@@ -138,6 +138,7 @@ section {
 	a {
 		color: $clr-txt-on-dark;
         font-weight: normal;
+        transition: 0.5s;
 
         &:hover {
             color: $clr-secondary;
