@@ -1,9 +1,11 @@
 $(document).ready(function() {
-    if ($('#header--section')) {
+    if (location.pathname === '/index.html' || location.pathname === '/') {
         // index page
         indexScroll();
         indexTooltip();
         indexProcess();
+    } else if (location.pathname === '/team.html') {
+        teamImage();
     }
 });
 
@@ -110,5 +112,18 @@ function indexProcess() {
     $('.process-image').hover(function() {
         $('.process-title').hide();
         $($('.process-title')[$(this).index()]).show();
+    });
+}
+
+
+
+// change image when hover in team page
+function teamImage() {
+    $('.team-member').mouseenter(function() {
+        var url = 'img/' + $(this).attr('team-member') + '-hover.gif';
+        $(this).children('.default').attr('src', url);
+    }).mouseleave(function() {
+        var url = 'img/' + $(this).attr('team-member') + '.jpg';
+        $(this).children('.default').attr('src', url);
     });
 }

@@ -1,0 +1,19 @@
+#team-section {
+    width: 900px;
+    margin: 0 auto;
+    padding: 0;
+    background-color: white;
+
+    .team-member {
+        float: left;
+
+        img {
+            display: none;
+            width: 300px;
+
+            &.default {
+                display: block;
+            }
+        }
+    }
+}

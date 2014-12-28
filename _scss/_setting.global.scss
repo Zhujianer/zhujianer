@@ -5,8 +5,28 @@ body {
 
 
 
+// fix float
+.clear-both {
+    clear: both;
+}
+
+
+
 // display in one line when possible and split into lines
 // when on mobile devices
 .mobile-split {
     display: inline-block;
+}
+
+
+
+// fix page position due to nav
+.page {
+    margin-top: 80px;
+    margin-bottom: 40px;
+
+    h2 {
+        color: $clr-secondary;
+        text-align: center;
+    }
 }
