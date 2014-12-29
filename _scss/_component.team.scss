@@ -1,3 +1,9 @@
+#team-page {
+    margin: 0;
+    padding: 80px;
+    background-color: $clr-gray-lighter;
+}
+
 #team-section {
     width: 900px;
     margin: 0 auto;
@@ -16,4 +22,9 @@
             }
         }
     }
+}
+
+.center-logo {
+    margin: 10px auto;
+    display: block;
 }
