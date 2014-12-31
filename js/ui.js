@@ -5,13 +5,17 @@ $(document).ready(function() {
         indexTooltip();
         indexProcess();
     } else if (location.pathname === '/team.html') {
-        teamImage();
+        if ($(window).width() < 768) {
+            teamImageMobile();
+        } else {
+            teamImage();
+        }
     }
 });
 
 
 
-// Change browser and mobile position when scroll down.
+// change browser and mobile position when scroll down.
 function indexScroll() {
     var headerBrowserHeight = $('#index-header').height() + 1
             - $('#header-browser').height();
@@ -44,10 +48,10 @@ function indexScroll() {
 
 
 
-// Show tooltip in index page when hover or randomly
+// show tooltip in index page when hover or randomly
 var tooltipHandle = null;
 function indexTooltip() {
-    // Init
+    // init
     $('.logo-primary.tooltip').tooltipster({
         theme: 'home-tooltip',
         animation: 'swing',
@@ -80,7 +84,7 @@ function indexTooltip() {
         autoClose: false
     });
 
-    // Show one tooltip in every other 5 seconds
+    // show one tooltip in every other 5 seconds
     $($('.tooltip')[0]).tooltipster('show');
     var id = 1;
     var len = $('.tooltip').length;
@@ -172,4 +176,22 @@ function teamImage() {
             $('#' + nameB + '-img').attr('src', imgB);
         }, 1800);
     }
+}
+
+// mobile effect for team page
+function teamImageMobile() {
+    var names = ['wenli', 'jiajun', 'shixin', 'chentian', 'yingshan', 
+            'qianying'];
+    var id = 0;
+    $(window).scroll(function(e) {
+        if (id === names.length) {
+            return;
+        }
+        var top = $(window).scrollTop();
+        if (top > $('#' + names[id] + '-img').offset().top - 200) {
+            $('#' + names[id] + '-img').attr('src', 'img/' + names[id]
+                    + '-hover.gif');
+            ++id;
+        }
+    });
 }
