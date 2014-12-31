@@ -1,13 +1,20 @@
 #contact-form {
     margin-top: 20px;
-    padding: 0;
 
     lable {
-        padding-top: 7px;
+        padding-top: 15px;
+    }
+
+    input {
+        margin-top:8px;
     }
 
     textarea {
         resize: none;
+    }
+
+    p {
+        margin: 40px 0 140px 0;
     }
 
     .btn {

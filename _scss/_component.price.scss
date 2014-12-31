@@ -33,6 +33,7 @@
             border: 2px solid $clr-secondary;
             z-index: 10;
             position: relative;
+            box-shadow: 0 0 20px 1px rgba(57,56,56,0.81);
         }
 
         &.purple {
