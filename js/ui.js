@@ -5,13 +5,17 @@ $(document).ready(function() {
         indexTooltip();
         indexProcess();
     } else if (location.pathname === '/team.html') {
-        teamImage();
+        if ($(window).width() < 768) {
+            teamImageMobile();
+        } else {
+            teamImage();
+        }
     }
 });
 
 
 
-// Change browser and mobile position when scroll down.
+// change browser and mobile position when scroll down.
 function indexScroll() {
     var headerBrowserHeight = $('#index-header').height() + 1
             - $('#header-browser').height();
@@ -44,10 +48,10 @@ function indexScroll() {
 
 
 
-// Show tooltip in index page when hover or randomly
+// show tooltip in index page when hover or randomly
 var tooltipHandle = null;
 function indexTooltip() {
-    // Init
+    // init
     $('.logo-primary.tooltip').tooltipster({
         theme: 'home-tooltip',
         animation: 'swing',
@@ -80,7 +84,7 @@ function indexTooltip() {
         autoClose: false
     });
 
-    // Show one tooltip in every other 5 seconds
+    // show one tooltip in every other 5 seconds
     $($('.tooltip')[0]).tooltipster('show');
     var id = 1;
     var len = $('.tooltip').length;
@@ -100,7 +104,9 @@ function cancelTooltip() {
         clearInterval(tooltipHandle);
         tooltipHandle = null;
     }
-    $('.tooltip').tooltipster('hide');
+    if ($('.tooltip').length > 0) {
+        $('.tooltip').tooltipster('hide');
+    }
 }
 
 
@@ -119,11 +125,73 @@ function indexProcess() {
 
 // change image when hover in team page
 function teamImage() {
+    var hoverHandler = null;
+
     $('.team-member').mouseenter(function() {
-        var url = 'img/' + $(this).attr('team-member') + '-hover.gif';
+        var name = $(this).attr('team-member');
+        // use gif when hover
+        var url = 'img/' + name + '-hover.gif';
         $(this).children('.default').attr('src', url);
+
+        // other members in the same line look at the hovered one
+        if (name === 'wenli') {
+            lookAt('jiajun', 'img/jiajun-left.jpg',
+                    'shixin', 'img/shixin-left.jpg');
+        } else if (name === 'jiajun') {
+            lookAt('shixin', 'img/shixin-left.jpg',
+                    'wenli', 'img/wenli-right.jpg');
+        } else if (name === 'shixin') {
+            lookAt('wenli', 'img/wenli-right.jpg',
+                    'jiajun', 'img/jiajun-right.jpg');
+        } else if (name === 'chentian') {
+            lookAt('yingshan', 'img/yingshan-left.jpg',
+                    'qianying', 'img/qianying-left.jpg');
+        } else if (name === 'yingshan') {
+            lookAt('qianying', 'img/qianying-left.jpg',
+                    'chentian', 'img/chentian-right.jpg');
+        } else if (name === 'qianying') {
+            lookAt('chentian', 'img/chentian-right.jpg',
+                    'yingshan', 'img/yingshan-right.jpg');
+        }
+
     }).mouseleave(function() {
-        var url = 'img/' + $(this).attr('team-member') + '.jpg';
-        $(this).children('.default').attr('src', url);
+        $('.team-member').each(function() {
+            var name = $(this).attr('team-member');
+            // use default when unhover
+            var url = 'img/' + name + '.jpg';
+            $(this).children('.default').attr('src', url);
+        });
+        if (hoverHandler) {
+            clearTimeout(hoverHandler);
+            hoverHandler = null;
+        }
+    });
+
+    function lookAt(nameA, imgA, nameB, imgB) {
+        if (hoverHandler) {
+            clearTimeout(hoverHandler);
+        }
+        hoverHandler = setTimeout(function() {
+            $('#' + nameA + '-img').attr('src', imgA);
+            $('#' + nameB + '-img').attr('src', imgB);
+        }, 1800);
+    }
+}
+
+// mobile effect for team page
+function teamImageMobile() {
+    var names = ['wenli', 'jiajun', 'shixin', 'chentian', 'yingshan', 
+            'qianying'];
+    var id = 0;
+    $(window).scroll(function(e) {
+        if (id === names.length) {
+            return;
+        }
+        var top = $(window).scrollTop();
+        if (top > $('#' + names[id] + '-img').offset().top - 200) {
+            $('#' + names[id] + '-img').attr('src', 'img/' + names[id]
+                    + '-hover.gif');
+            ++id;
+        }
     });
 }

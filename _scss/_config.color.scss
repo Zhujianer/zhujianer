@@ -3,8 +3,8 @@ $clr-primary-dark: darken($clr-primary, 10%);
 $clr-primary-light: lighten($clr-primary, 10%);
 
 $clr-secondary: #d0648a;
-$clr-secondary-dark: darken($clr-secondary, 20%);
-$clr-secondary-light: lighten($clr-secondary, 20%);
+$clr-secondary-dark: darken($clr-secondary, 10%);
+$clr-secondary-light: lighten($clr-secondary, 10%);
 
 $clr-primary-secondary: #6f4162;
 
@@ -14,5 +14,6 @@ $clr-gray: #ccc;
 $clr-gray-light: #eee;
 $clr-gray-lighter: #f3f3f3;
 $clr-gray-lightest: #fcfcfc;
+$clr-gray-dark: #666;
 
 $clr-txt-on-dark: $clr-gray-lighter;

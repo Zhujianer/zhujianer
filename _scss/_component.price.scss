@@ -20,20 +20,14 @@
     .table {
         text-align: center;
         border-radius: 4px;
-        line-height: 17pt;
         background-color: $clr-gray-lightest;
-
-        button {
-            margin: 5px;
-            border-radius: 6px;
-        }
 
         &.pink {
             margin-top: 20px;
             border: 2px solid $clr-secondary;
             z-index: 10;
             position: relative;
-            box-shadow: 0 0 20px 1px rgba(57,56,56,0.81);
+            box-shadow: 0 0 20px 1px rgba(100, 100, 100, 0.6);
         }
 
         &.purple {
@@ -47,18 +41,6 @@
 
         &.pink .head {
             background-color: $clr-secondary;
-        }
-
-        &.purple button {
-            color: $clr-primary;
-            background-color: $clr-gray-lighter;
-            border: 2px solid $clr-primary;
-        }
-
-        &.pink button {
-            color: $clr-gray-lightest;
-            background-color: $clr-secondary;
-            border: 2px solid $clr-secondary;
         }
     }
 

@@ -5,6 +5,40 @@ body {
 
 
 
+// button styles
+.btn {
+    border-radius: 5px;
+    padding: 8px 16px;
+    transition: 0.5s;
+}
+
+.btn-default {
+    color: $clr-gray-dark;
+    background-color: transparent;
+    border: 1px solid $clr-gray-dark;
+}
+
+.btn-primary {
+    color: $clr-txt-on-dark;
+    background-color: $clr-primary;
+
+    &:hover {
+        background-color: $clr-primary-dark;
+    };
+}
+
+.btn-secondary {
+    color: $clr-txt-on-dark;
+    background-color: $clr-secondary;
+
+    &:hover {
+        color: $clr-txt-on-dark;
+        background-color: $clr-secondary-dark;
+    };
+}
+
+
+
 // fix float
 .clear-both {
     clear: both;
@@ -29,10 +63,4 @@ body {
         color: $clr-secondary;
         text-align: center;
     }
-}
-
-
-
-.center {    
-    text-align: center;
 }
