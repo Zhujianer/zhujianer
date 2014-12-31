@@ -1,21 +1,23 @@
 #team-page {
     margin: 0;
-    padding: 80px;
+    padding: 80px 10px;
     background-color: $clr-gray-lighter;
 }
 
 #team-section {
-    width: 900px;
+    width: 100%;
+    max-width: 900px;
     margin: 0 auto;
     padding: 0;
-    background-color: white;
+    background-color: $clr-gray-lighter;
 
     .team-member {
         float: left;
+        width: 33.333333333333333%;
 
         img {
             display: none;
-            width: 300px;
+            width: 100%;
 
             &.default {
                 display: block;
