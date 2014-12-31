@@ -1,0 +1,48 @@
+---
+layout: default
+---
+
+{% include nav.html %}
+
+<div class="page">
+    <div class="container">
+        <img class="center-logo" src="img/logo-no-background.png" />
+        <h2>联系我们</h2>
+    
+        <div class="row">
+            <div class="col-sm-4 col-xs-12 col-sm-offset-4" id="contact-form">
+                <form class="form-horizontal" method="POST" action="//formspree.io/228125840@qq.com">
+                    <input type="hidden" name="_subject" value="竹尖儿上有人找你" />
+
+                    <div class="form-group">  
+                        <lable for="msg-name" class="col-sm-4 control-lable">姓名：</lable>
+                        <div class="col-sm-8">
+                            <input type="text" class="form-control" name="name" id="msg-name"/>
+                        </div>
+                    </div>            
+
+                    <div class="form-group">  
+                        <lable for="_replyto" class="col-sm-4 control-lable">电子邮箱：</lable>
+                        <div class="col-sm-8">
+                            <input type="email" class="form-control" name="_replyto" id="_replyto"/>
+                        </div>
+                    </div>
+
+                    <div class="form-group">  
+                        <lable for="msg-phone" class="col-sm-4 control-lable">联系电话：</lable>
+                        <div class="col-sm-8">
+                            <input type="text" class="form-control" name="phone" id="msg-phone"/>
+                        </div>
+                    </div>
+
+                    <textarea class="form-control" name="message" id="msg" rows="5" placeholder="有什么问题尽管砸吧，欢迎调戏！"></textarea>
+
+                    <input type="submit" class="btn btn-primary" value="发送"/>
+                </form>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+{% include footer.html %}
