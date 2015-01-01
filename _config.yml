@@ -1,4 +1,5 @@
 name: Zhujianer
+url: http://zhujianer.com
 markdown: kramdown
 highlighter: pygments
 exclude: ["node_modules", "gulpfile.js", "package.json"]
