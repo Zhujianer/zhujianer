@@ -25,6 +25,11 @@ body {
     &:hover {
         background-color: $clr-primary-dark;
     };
+
+    &.disabled, &.disabled:hover {
+        background: $clr-primary-light;
+        cursor: auto;
+    }
 }
 
 .btn-secondary {
