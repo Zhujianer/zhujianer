@@ -39,6 +39,3 @@ node_modules
 .tmp
 vendor
 _site
-css
-js
-
