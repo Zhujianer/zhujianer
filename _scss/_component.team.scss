@@ -2,6 +2,12 @@
     margin: 0;
     padding: 80px 10px;
     background-color: $clr-gray-lighter;
+
+    .team-subtitle {
+        text-align: center;
+        color: $clr-primary;
+        margin-top: -15px;
+    }
 }
 
 #team-section {
