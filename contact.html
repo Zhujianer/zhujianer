@@ -13,36 +13,52 @@ layout: default
         <div class="row">
             <div class="col-sm-6 col-xs-12 col-sm-offset-3" id="contact-form">
                 <form class="form-horizontal" data-toggle="validator" method="POST" action="//formspree.io/contact@zhujianer.com">
-                    <input type="hidden" name="_subject" value="竹尖儿上有人找你" />
+                    <input type="hidden" name="_subject" value="竹尖儿上有人找你！" />
                     <input type="hidden" name="_next" value="http://zhujianer.com/contact-success.html" />
 
                     <div class="form-group">
-                        <lable for="msg-name" class="col-sm-4 control-lable">姓名：</lable>
-                        <div class="col-sm-8">
-                            <input type="text" class="form-control" name="name" id="msg-name" data-error="请告诉我们怎么称呼您" required/>
-                            <div class="help-block with-errors"></div>
+                        <div class="row">
+                            <div class="col-sm-4">
+                                <label for="msg-name" class="control-label">姓名：</label>
+                            </div>
+                            <div class="col-sm-8">
+                                <input type="text" class="form-control" name="name" id="msg-name" data-error="请告诉我们怎么称呼您？" required/>
+                                <div class="help-block with-errors"></div>
+                            </div>
                         </div>
                     </div>
 
                     <div class="form-group">
-                        <lable for="_replyto" class="col-sm-4 control-lable">电子邮箱：</lable>
-                        <div class="col-sm-8">
-                            <input type="email" class="form-control" name="_replyto" id="_replyto" data-error="邮件地址不对哟！" required/>
-                            <div class="help-block with-errors"></div>
+                        <div class="row">
+                            <div class="col-sm-4">
+                                <label for="_replyto" class="control-label">电子邮箱：</label>
+                            </div>
+                            <div class="col-sm-8">
+                                <input type="email" class="form-control" name="_replyto" id="_replyto" data-error="邮件地址不对哟！" required/>
+                                <div class="help-block with-errors"></div>
+                            </div>
                         </div>
                     </div>
 
                     <div class="form-group">
-                        <lable for="msg-phone" class="col-sm-4 control-lable">联系电话：</lable>
-                        <div class="col-sm-8">
-                            <input type="text" class="form-control" name="phone" id="msg-phone" pattern="^([-0-9]){8,}$" data-error="电话的格式不对呢"/>
-                            <div class="help-block with-errors"></div>
+                        <div class="row">
+                            <div class="col-sm-4">
+                                <label for="msg-phone" class="control-label">联系电话：</label>
+                            </div>
+                            <div class="col-sm-8">
+                                <input type="text" class="form-control" name="phone" id="msg-phone" pattern="^([-0-9]){8,}$" data-error="电话的格式不对呢！"/>
+                                <div class="help-block with-errors"></div>
+                            </div>
                         </div>
                     </div>
 
                     <div class="form-group">
-                        <textarea class="form-control" name="message" id="msg" rows="5" placeholder="有什么问题尽管砸吧，欢迎调戏！" data-error="您想对我们说什么呢？" required></textarea>
-                        <div class="help-block with-errors"></div>
+                        <div class="row">
+                            <div class="col-sm-12">
+                                <textarea class="form-control" name="message" id="msg" rows="5" placeholder="有什么问题尽管砸吧，欢迎调戏！" data-error="您想对我们说什么呢？" required></textarea>
+                                <div class="help-block with-errors"></div>
+                            </div>
+                        </div>
                     </div>
 
                     <input type="submit" class="btn btn-primary" value="发送"/>
