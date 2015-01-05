@@ -131,6 +131,7 @@ section {
 	a {
 		color: $clr-txt-on-dark;
         font-weight: normal;
+        font-size: $ft-sz-sm;
         transition: 0.5s;
 
         &:hover {
