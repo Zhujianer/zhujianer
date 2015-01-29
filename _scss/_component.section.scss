@@ -59,30 +59,46 @@ section {
             position: relative;
             top: 5%;
             background-image: url('../img/process.png');
-
-            &:hover {
-                background-position-y: 100%;
-            };
         }
 
         &#process-idea .image-block {
-            background-position-x: 0;
+            background-position: 0 0;
+
+            &:hover {
+                background-position: 0 100%;
+            };
         }
 
         &#process-design .image-block {
-            background-position-x: -100%;
+            background-position: -100% 0;
+
+            &:hover {
+                background-position: -100% 100%;
+            };
         }
 
         &#process-code .image-block {
-            background-position-x: -200%;
+            background-position: -200% 0;
+
+            &:hover {
+                background-position: -200% 100%;
+            };
         }
 
         &#process-launch .image-block {
-            background-position-x: -300%;
+            background-position: -300% 0;
+
+            &:hover {
+                background-position: -300% 100%;
+            };
         }
 
         &#process-monitor .image-block {
-            background-position-x: -400%;
+            background-position: -400% 0;
+
+            &:hover {
+                background-position: -400% 100%;
+            };
         }
     }
 
