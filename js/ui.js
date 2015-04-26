@@ -131,7 +131,7 @@ function teamImage() {
         var name = $(this).attr('team-member');
         // use gif when hover
         var url = 'img/' + name + '-hover.gif';
-        $(this).children('.default').attr('src', url);
+        $(this).find('.default').attr('src', url);
 
         // other members in the same line look at the hovered one
         if (name === 'wenli') {
